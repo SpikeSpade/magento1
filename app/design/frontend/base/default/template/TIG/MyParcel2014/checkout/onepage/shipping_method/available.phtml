@@ -73,8 +73,8 @@ $toggleOptions = $helper->getConfig('toggle_options', 'checkout') == '1' ? true 
         <?php $_sole = count($_shippingRateGroups) == 1;
         foreach ($_shippingRateGroups as $code => $_rates): ?>
             <?php $hideRate = $code == 'myparcel' && $useMyParcel && !$toggleOptions; ?>
-            <dt style="<?php echo $hideRate ? 'display:none;' : '';?>" class="<?php echo $code . '_holder'; ?>"><?php echo $this->escapeHtml($this->getCarrierName($code)) ?></dt>
-            <dd style="<?php echo $hideRate ? 'display:none;' : '';?>" class="<?php echo $code . '_holder'; ?>">
+            <dd style="<?php echo $hideRate ? 'display:none;' : '';?>" class="<?php echo $code . '_holder'; ?>"><?php echo $this->escapeHtml($this->getCarrierName($code)) ?></dd>
+            <dt style="<?php echo $hideRate ? 'display:none;' : '';?>" class="<?php echo $code . '_holder'; ?>">
                 <ul>
                     <?php $_sole = $_sole && count($_rates) == 1;
                     $lastRate = null;
@@ -146,7 +146,7 @@ $toggleOptions = $helper->getConfig('toggle_options', 'checkout') == '1' ? true 
                         <?php endif; ?>
                     <?php endforeach; ?>
                 </ul>
-            </dd>
+            </dt>
 
             <?php if ($code == 'myparcel' && $useMyParcel): ?>
                 <div id="mypa-load" style="<?php echo $toggleOptions && $_rate->getCode() !== $this->getAddressShippingMethod() ? 'display: none;' : ''; ?>">

@@ -14,7 +14,7 @@ $attribute  = array(
     'used_in_product_listing'    => true,
     'required'                   => false,
     'default'                    => 1,
-    'group'                      => "General"
+    'group'                      => "MyParcel opties"
 );
 $installer->addAttribute('catalog_product', 'show_myparcel_options', $attribute);
 $installer->endSetup();

@@ -12,7 +12,7 @@ $attribute  = array(
     'required'      =>  false,
     'user_defined'  =>  true,
     'default'       =>  "",
-    'group'         =>  "General"
+    'group'         =>  "Myparcel opties"
 );
 $installer->addAttribute('catalog_product', 'myparcel_mailbox_volume', $attribute);
 $installer->endSetup();
